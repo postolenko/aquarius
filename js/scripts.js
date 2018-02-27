@@ -1,6 +1,6 @@
 $(window).load(function() {
 
-    // getNavItemsSize();
+    getNavItemsSize();
 
     getHeaderStyles();
 
@@ -22,7 +22,7 @@ $(document).scroll(function() {
 
 $(document).ready(function() {
    
-    getNavItemsSize();
+    // getNavItemsSize();
 
 });
 
