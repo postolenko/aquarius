@@ -22,7 +22,7 @@ $(document).scroll(function() {
 
 $(document).ready(function() {
    
-    // getNavItemsSize();
+
 
 });
 
@@ -56,7 +56,5 @@ function getHeaderStyles() {
         $(".site-header").removeClass("fixed");
 
     }
-
-    console.log( $(".site-header").offset().top );
 
 }
