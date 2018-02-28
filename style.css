@@ -789,6 +789,7 @@ section {
     height: 26px;
     top: 63px;
     left: 654px;
+    z-index: 3;
 }
 
 .icon-box-13 {
@@ -888,7 +889,7 @@ section {
 }
 
 .icon-box:hover {
-    z-index: 3;
+    z-index: 4;
 }
 
 .icon-box:hover .tooltip {
