@@ -4,7 +4,7 @@ $(window).load(function() {
 
     getNavItemsSize();
 
-    getHeaderStyles();
+    // getHeaderStyles();
 
 });
 
@@ -32,7 +32,7 @@ $(document).scroll(function() {
 
 $(document).ready(function() {
 
-    // getHeaderStyles();
+    getHeaderStyles();
 
     onScroll();
 
@@ -56,9 +56,9 @@ $(document).ready(function() {
             'scrollTop': $target.offset().top+2
         }, 500, 'swing', function () {
             window.location.hash = target;
-            $(document).on("scroll", onScroll);
+            // $(document).on("scroll", onScroll);
         });
-        
+
     });
 
 });
