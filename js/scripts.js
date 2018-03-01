@@ -57,6 +57,14 @@ $(document).ready(function() {
 
     });
 
+     $(".scroll-top").click(function() {
+
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+
+     });
+
 });
 
 
@@ -84,9 +92,13 @@ function getHeaderStyles() {
 
         $(".site-header").addClass("fixed");
 
+        $(".scroll-top").fadeIn(300);
+
     } else {
 
         $(".site-header").removeClass("fixed");
+
+        $(".scroll-top").fadeOut(300);
 
     }
 
