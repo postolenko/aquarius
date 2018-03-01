@@ -1,10 +1,8 @@
-// var linkEvent = false;
-
 $(window).load(function() {
 
     getNavItemsSize();
 
-    // getHeaderStyles();
+    $(".scroll").mCustomScrollbar();
 
 });
 
@@ -16,8 +14,6 @@ $(window).resize(function() {
 
     onScroll();
 
-    // linkEvent = false;
-
 });
 
 $(document).scroll(function() {
@@ -25,8 +21,6 @@ $(document).scroll(function() {
     getHeaderStyles();
 
     onScroll();
-
-    // linkEvent = false;
 
 });
 
@@ -36,28 +30,26 @@ $(document).ready(function() {
 
     onScroll();
 
-    // linkEvent = false;
-
      $('.main-nav a[href^="#"]').on('click', function (e) {
         e.preventDefault();
-        // $(document).off("scroll");
 
-        // linkEvent = true;
-        
-        $('a').each(function () {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active');
-      
         var target = this.hash,
             menu = target;
-        $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+2
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            // $(document).on("scroll", onScroll);
-        });
+            $target = $(target);
+
+        if( $target.length > 0 ) {
+        
+            $('a').each(function () {
+                $(this).removeClass('active');
+            });
+
+            $(this).addClass('active');
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top+2
+            }, 500, 'swing', function () {
+                window.location.hash = target;
+            });
+        }
 
     });
 
@@ -104,7 +96,7 @@ function onScroll(event){
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
 
-        // if( linkEvent == false ) {
+        if( refElement.length > 0 ) {
 
             if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
                 $('#menu-center ul li a').removeClass("active");
@@ -114,7 +106,7 @@ function onScroll(event){
                 currLink.removeClass("active");
             }
 
-        // }
+        }
 
     });
 
