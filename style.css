@@ -703,7 +703,7 @@ section {
     left: 58px;
 }
 
-.icon-box {
+.icons-box .icon-box {
     position: absolute;
     z-index: 2;
     cursor: pointer;
@@ -711,6 +711,10 @@ section {
     -moz-border-radius: 50%;
     border-radius: 50%;
 }
+
+/*.icons-box .icon-box {
+    cursor: pointer;
+}*/
 
 .icon-box-1 {
     width: 132px;
@@ -921,7 +925,7 @@ p.green {
     color: #69e0cb;
 }
 
-.icon-box img {
+.icons-box .icon-box img {
     -webkit-transition-property: transform;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
@@ -943,7 +947,7 @@ p.green {
     transition-timing-function: ease;
 }
 
-.icon-box:hover img {
+.icons-box .icon-box:hover img {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     transform: scale(1.1);
@@ -1421,6 +1425,9 @@ p .green {
     height: 60px;
     margin: 0 auto 12px auto;
     position: relative;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
 }
 
 .level-item .icon-box:after {
