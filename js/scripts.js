@@ -12,6 +12,8 @@ $(window).resize(function() {
 
     getHeaderStyles();
 
+    getUserPosition();
+
     onScroll();
 
 });
@@ -27,6 +29,8 @@ $(document).scroll(function() {
 $(document).ready(function() {
 
     getHeaderStyles();
+
+    getUserPosition();
 
     onScroll();
 
@@ -107,6 +111,27 @@ function onScroll(event){
             }
 
         }
+
+    });
+
+}
+
+function getUserPosition() {
+
+    $(".user-levels .level-item").each(function() {
+
+        if( $(this).hasClass("active") ) {
+
+            var userLeftCoord = $(this).offset().left + $(this).find(".icon-box").width() / 2 - $(".user-step").width() / 2 ;
+
+            $(".user-step").offset({left : userLeftCoord});
+
+            console.log(userLeftCoord);
+
+            return false;
+
+        }
+        
 
     });
 

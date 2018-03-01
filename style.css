@@ -1273,10 +1273,15 @@ p.green {
     color: #ffffff;
 }
 
+.user-levels {
+    position: relative;
+}
+
 .levels_wrapp {
     text-align: center;
     margin: 0 -6px;
     padding: 182px 0 224px 0;
+    position: relative;
 }
 
 .level-item {
@@ -1284,6 +1289,11 @@ p.green {
     vertical-align: top;
     width: 78px;
     margin: 0 6px;
+    position: relative;
+}
+
+.level-item:hover {
+    z-index: 2;
     position: relative;
 }
 
@@ -1324,6 +1334,11 @@ p.green {
 }
 
 .level-item:hover .level-tooltip {
+    opacity: 1;
+    left: -122px;
+}
+
+.level-item.active .level-tooltip {
     opacity: 1;
     left: -122px;
 }
@@ -1464,6 +1479,10 @@ p .green {
     opacity: 1;
 }
 
+.level-item.active .icon-box:after {
+    opacity: 1;
+}
+
 .level-item .icon-box img {
     display: block;
     width: auto;
@@ -1561,6 +1580,11 @@ p .green {
     left: -31px;
 }
 
+.level-item:nth-child(1).active .level-tooltip {
+    opacity: 1;
+    left: -31px;
+}
+
 .level-item:nth-child(1) .level-tooltip .tr-top {
     margin: 0 0 0 -103px;
 }
@@ -1579,6 +1603,11 @@ p .green {
     left: -210px;
 }
 
+.level-item:last-child.active .level-tooltip {
+    opacity: 1;
+    left: -210px;
+}
+
 .level-item:last-child .level-tooltip .tr-top {
     margin: 0 0 0 74px;
 }
@@ -1590,6 +1619,30 @@ p .green {
 
 .level-item:last-child .users-tooltip .tr-bottom {
     margin: 0 0 0 74px;
+}
+
+.user-step {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 200px;
+    text-align: center;
+    position: absolute;
+    bottom: 61px;
+    left: 0;
+}
+
+.user-step img {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    height: auto;
+}
+
+.user-step p {
+    padding-top: 7px;
+    font-size: 25px;
+    line-height: 33px;
+    color: #ffffff;
 }
 
 /*-- /Личный кабинет --*/
